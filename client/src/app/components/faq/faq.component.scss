@@ -1,0 +1,75 @@
+.color {
+  color: white;
+  background-color: #7297c9;
+}
+
+
+.bg-color {
+  background-image: url("/assets/img/bg.jpeg");
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Extra small devices (phones, 360px and down) */
+@media only screen and (max-width: 360px) {
+  .bg-color {
+    height: 3100px;
+  }
+}
+
+/* Extra small devices (phones, 360px and up) */
+@media only screen and (min-width: 360px) {
+  .bg-color {
+    height: 3100px;
+  }
+}
+/* Extra small devices (phones, 442px and up) */
+@media only screen and (min-width: 442px) {
+  .bg-color {
+    height: 2350px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 500px and up) */
+@media only screen and (min-width: 500px) {
+  .bg-color {
+    height: 2300px;
+  }  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .bg-color {
+    height: 2100px;
+  }  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .bg-color {
+    height: 1850px;
+  }  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .bg-color {
+    height: 1500px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .bg-color {
+    height: 1500px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .bg-color {
+    height: 1500px;
+  }
+}

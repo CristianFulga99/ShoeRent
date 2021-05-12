@@ -1,0 +1,43 @@
+<div class="bg-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="jumbotron text-center" style="margin-top: 60px;">
+                    <div class="flex-container">
+                        <div class="flex-item shadow-lg p-2 mb-5 bg-white rounded" *ngFor="let item of plans"
+                        (click)="onClickPlan(item)">
+                            <h4>Plan</h4>
+                            <h3 style="color: #3d7ccf;">{{ item.nomePiano }}</h3>
+                            <h3 style="color: #3d7ccf;">{{ item.costo }}</h3>
+                            <h3 style="color: #3d7ccf;">{{ item.durata }}</h3>
+                        </div>
+                    </div>
+    
+                    <div class="flex-container2 mb-5">
+                        <div *ngFor="let item of plans" class="flex-item shadow-lg p-3 mb-5 rounded">
+                            <h5 class="pb-3">AVAILABLE SHOES</h5>
+                            <div *ngFor="let subitem of item.shoes" style="color: #5b7aa1;"
+                                (click)="getPlanIdAndShoeId(item._id, subitem.idScarpa)">
+                                <!-- {{item._id}}, {{subitem.idScarpa}} -->
+                                <!-- {{subitem.idScarpa}} <br> -->
+                                <div (click)="onClickShoe(item, subitem)">
+                                    <img src={{subitem.imageURL}} alt="" width="150" height="150">
+                                    <br><br>
+                                    Name: <span class="text-white">{{ subitem.shoeName }}</span> <br>
+                                    Model: <span class="text-white">{{ subitem.model }}</span> <br>
+                                    Version: <span class="text-white">{{ subitem.version }}</span> <br>
+                                    Type: <span class="text-white">{{ subitem.type }}</span> <br>
+                                    Colors: <span class="text-white">{{ subitem.colors.color1 }}, </span>
+                                    <span class="text-white">{{ subitem.colors.color2 }}, </span>
+                                    <span class="text-white">{{ subitem.colors.color3 }}</span>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

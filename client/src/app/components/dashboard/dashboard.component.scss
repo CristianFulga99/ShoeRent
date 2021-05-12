@@ -1,0 +1,138 @@
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+h4 {
+  margin-bottom: 0;
+  padding: 10px;
+
+}
+
+.color {
+  color: #6b6b6b;
+}
+
+.text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.d-flex {
+  .item {
+    width: 300px;
+    text-align: center;
+    h4 {
+      cursor: pointer;
+    }
+  }
+}
+
+.d-flex {
+  .item2 {
+    width: 95%;
+    text-align: center;
+    h4 {
+      cursor: pointer;
+    }
+  }
+}
+
+.flex-container2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  .flex-item {
+    width: 300px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.bg-color {
+  background-image: url("/assets/img/bg.jpeg");
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+}
+
+.jumbotron {
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: none;
+
+  h1 {
+    font-size:100px;
+    color: #3d7ccf;
+    text-shadow: 0px 5px 10px rgb(71, 71, 71);
+  }
+}
+
+h2 {
+  font-size: 65px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .jumbotron {
+    h1 {
+      font-size:50px;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .jumbotron {
+    h1 {
+      font-size:80px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .bg-color {
+    height: 1440px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .bg-color {
+    height: 1440px;
+  }
+  .jumbotron {
+    h1 {
+      font-size:140px;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .bg-color {
+    height: 1440px;
+  }
+  .jumbotron {
+    h1 {
+      font-size:150px;
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .bg-color {
+    height: 1440px;
+  }
+
+  .jumbotron {
+    h1 {
+      font-size:150px;
+    }
+  }
+}

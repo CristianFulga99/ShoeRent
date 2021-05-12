@@ -1,0 +1,50 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/"> SHOE RENT </a>
+
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+    data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav" [collapse]="isCollapsed">
+    <ul class="navbar-nav" *ngIf="!auth.isLoggedIn()">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/"> Home <span class="sr-only" (click)="reset()">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" (click)="reset()"> Log In </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav" *ngIf="auth.isLoggedIn()">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="reset()"> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" (click)="reset()"> Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/faq" (click)="reset()"> FAQ </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile" (click)="reset()"> Profile: {{ auth.getUserDetails()?.username }} </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="bg-light d-flex justify-content-between p-4">
+  <div class="font-italic"> &copy; 2021 - Cristian Fulga, Mattia Tosoni, Marc Esparaz </div>
+  <div class="text-muted font-italic" routerLink="/faq" style="cursor: pointer;"> DOMANDE FREQUENTI </div>
+</div>
+
+
+<!-- <div class="bg-light d-flex justify-content-between p-4" style="margin-top: 500px;">
+  <div class="font-italic"> &copy; 2021 - Cristian Fulga, Mattia Tosoni, Marc Esparaz </div>
+    <div class="text-muted font-italic" routerLink="/faq" style="cursor: pointer;"> DOMANDE FREQUENTI </div>
+</div> -->

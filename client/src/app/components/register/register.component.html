@@ -1,0 +1,78 @@
+<div class="bg-color">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="jumbotron text-center" style="margin-top: 150px;">
+          <!-- <img src="../../../assets/img/jordan.png" class="rounded mx-auto d-block" alt="nike jordan" height="150"
+            width="150"> -->
+          <h1 style="color:#3d7ccf">REGISTER</h1>
+          <p class="lead mb-5 text-white"> Already a member? Please <a routerLink="/login"
+              style="color: #3d7ccf; font-weight: bold;">log in</a> instead.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-3 col-md-2 col-sm-12"></div>
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <div class="container">
+          <form #registerForm="ngForm" (submit)="register()" class="form">
+            <div class="form-group">
+              <input type="text" class="form-control" name="name" placeholder="Username"
+                [(ngModel)]="credentials.username" required />
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="credentials.email"
+                required />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="password" placeholder="Password"
+                [(ngModel)]="credentials.password" required />
+            </div>
+  
+            <div class="form-group">
+              <!-- <label for="inputState">Gender</label> -->
+              <select class="form-control" [(ngModel)]="credentials.gender" name="gender" required>
+                <option value="" disabled>
+                  choose gender
+                </option>
+                <option *ngFor="let gender of genders" [value]="gender.value">
+                  {{gender.value}}
+                </option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <!-- <label for="inputState">Age</label> -->
+              <select class="form-control" [(ngModel)]="credentials.age" name="age" required>
+                <option value="" disabled>
+                  choose age
+                </option>
+                <option *ngFor="let age of ages" [value]="age.value">
+                  {{age.value}}
+                </option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <!-- <label for="inputState">country</label> -->
+              <select class="form-control" [(ngModel)]="credentials.country" name="country" required>
+                <option value="" disabled>
+                  choose country
+                </option>
+                <option *ngFor="let country of countries" [value]="country.value">
+                  {{country.value}}
+                </option>
+              </select>
+            </div>
+            
+            <button type="submit" class="btn btn-block btn-info">Register</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-2 col-sm-12"></div>
+  
+    </div>
+  </div>
+</div>
